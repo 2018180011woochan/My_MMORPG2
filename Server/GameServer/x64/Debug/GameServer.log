@@ -1,3 +1,5 @@
 ﻿  pch.cpp
   GameServer.cpp
-  GameServer.vcxproj -> C:\Users\KWC\Desktop\myGameServer2\Server\Binary\Debug\GameServer.exe
+C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\GameServer.cpp(7,2): error C2059: 구문 오류: '상수'
+C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\GameServer.cpp(7,10): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\GameServer.cpp(7,10): warning C4183: 'USE_MANY_LOKCS': 반환 형식이 없습니다. 'int'를 반환하는 멤버 함수로 간주됩니다.
