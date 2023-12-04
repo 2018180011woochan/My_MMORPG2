@@ -138,6 +138,12 @@ public class PlayerController : CreatureController
             //_coSkill = StartCoroutine("CoStartPunch");
             _coSkill = StartCoroutine("CoStartShootArrow");
         }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            State = CreatureState.Skill;
+            _coSkill = StartCoroutine("CoStartPunch");
+            //_coSkill = StartCoroutine("CoStartShootArrow");
+        }
     }
 
     IEnumerator CoStartPunch()
