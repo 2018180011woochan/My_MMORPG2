@@ -1,0 +1,3 @@
+#pragma once
+
+enum COMP_TYPE { OP_ACCEPT, OP_RECV, OP_SEND, OP_RANDOM_MOVE };

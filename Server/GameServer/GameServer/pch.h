@@ -7,7 +7,18 @@
 #pragma comment(lib, "MSWSock.lib")
 using namespace std;
 
+#include <thread>
+#include <vector>
+#include <mutex>
+#include <unordered_set>
+#include <queue>
+#include <chrono>
+#include <string>
+#include <atomic>
+
+#include "protocol.h"
 #include "Include.h"
+#include "OverlappedEXP.h"
 
 HANDLE GIocpHandle;
 SOCKET GSocket;
