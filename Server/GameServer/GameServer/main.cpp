@@ -2,6 +2,14 @@
 
 constexpr int ThreadSize = 6;
 
+// юс╫ц
+static int id = 1;
+
+void Disconnect(int clientID)
+{
+
+}
+
 void Dispatch()
 {
 	while (true) {
@@ -13,6 +21,19 @@ void Dispatch()
 		int ClientID = static_cast<int>(key);
 
 		if (false == ret) {
+			if (exOver->compType == OP_ACCEPT)
+				cout << "Accept Error\n";
+			else {
+				cout << "GQCS Error on client[" << key << "]\n";
+				Disconnect(ClientID);
+				if (exOver->compType == OP_SEND) 
+					delete exOver;
+				continue;
+			}
+		}
+
+		switch (exOver->compType) {
+		case OP_ACCEPT:
 
 		}
 	}
