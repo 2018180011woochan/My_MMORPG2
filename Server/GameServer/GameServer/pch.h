@@ -15,6 +15,7 @@ using namespace std;
 #include <chrono>
 #include <string>
 #include <atomic>
+#include <array>
 
 #include "protocol.h"
 #include "Include.h"
@@ -22,6 +23,3 @@ using namespace std;
 
 HANDLE GIocpHandle;
 SOCKET GSocket;
-
-// temp
-constexpr int PORT_NUM = 7777;

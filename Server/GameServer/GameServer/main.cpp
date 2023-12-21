@@ -34,7 +34,8 @@ void Dispatch()
 
 		switch (exOver->compType) {
 		case OP_ACCEPT:
-
+			SOCKET clientSocket = reinterpret_cast<SOCKET>(exOver->wsaBuf.buf);
+			//int 
 		}
 	}
 }

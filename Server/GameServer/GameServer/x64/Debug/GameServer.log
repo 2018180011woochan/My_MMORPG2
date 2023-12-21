@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  OverlappedEXP.cpp
+  Session.cpp
+  SessionManager.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+pch.obj : error LNK2005: "void * GIocpHandle" (?GIocpHandle@@3PEAXEA)이(가) main.obj에 이미 정의되어 있습니다.
+pch.obj : error LNK2005: "unsigned __int64 GSocket" (?GSocket@@3_KA)이(가) main.obj에 이미 정의되어 있습니다.
+C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\x64\Debug\GameServer.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.

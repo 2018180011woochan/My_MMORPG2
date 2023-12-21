@@ -18,6 +18,12 @@
     <Filter Include="소스 파일\00.OverlappedEXP">
       <UniqueIdentifier>{4ad5a0f9-4f5b-479c-8789-70c85792440e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01.Session">
+      <UniqueIdentifier>{5f8cf66d-b123-409c-ba8a-3e8bcf391928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Session\SessionManager">
+      <UniqueIdentifier>{65dc3035-6f5a-40f1-b7bf-f179ffb9f278}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,6 +34,12 @@
     </ClCompile>
     <ClCompile Include="OverlappedEXP.cpp">
       <Filter>소스 파일\00.OverlappedEXP</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>소스 파일\01.Session</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionManager.cpp">
+      <Filter>소스 파일\01.Session\SessionManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +57,12 @@
     </ClInclude>
     <ClInclude Include="protocol.h">
       <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>소스 파일\01.Session</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionManager.h">
+      <Filter>소스 파일\01.Session\SessionManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
