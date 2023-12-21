@@ -1,9 +1,11 @@
 #include "pch.h"
-
+#include "SessionManager.h"
 constexpr int ThreadSize = 6;
 
 // юс╫ц
 static int id = 1;
+HANDLE GIocpHandle;
+SOCKET GSocket;
 
 void Disconnect(int clientID)
 {
@@ -13,6 +15,8 @@ void Disconnect(int clientID)
 void Dispatch()
 {
 	while (true) {
+		SessionManager& Sessions = SessionManager::getInstance();
+
 		DWORD numBytes;
 		ULONG_PTR key;
 		WSAOVERLAPPED* over = nullptr;
@@ -35,7 +39,23 @@ void Dispatch()
 		switch (exOver->compType) {
 		case OP_ACCEPT:
 			SOCKET clientSocket = reinterpret_cast<SOCKET>(exOver->wsaBuf.buf);
-			//int 
+			
+			// temp
+			int clientID = id;
+			id++;
+			Sessions.clients[clientID].socket = clientSocket;
+
+			CreateIoCompletionPort(reinterpret_cast<HANDLE>(clientSocket),
+				GIocpHandle, clientID, 0);
+			Sessions.clients[clientID].DoRecv();
+			
+			clientSocket = WSASocket(AF_INET, SOCK_STREAM, 0, NULL, 0, WSA_FLAG_OVERLAPPED);
+
+			ZeroMemory(&exOver->over, sizeof(exOver->over));
+			exOver->wsaBuf.buf = reinterpret_cast<char*>(clientSocket);
+			int addrSize = sizeof(SOCKADDR_IN);
+			AcceptEx(GSocket, clientSocket, exOver->sendBuf, 0, addrSize + 16, addrSize + 16, 0, &exOver->over);
+			break;
 		}
 	}
 }

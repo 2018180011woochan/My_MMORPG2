@@ -21,5 +21,3 @@ using namespace std;
 #include "Include.h"
 #include "OverlappedEXP.h"
 
-HANDLE GIocpHandle;
-SOCKET GSocket;

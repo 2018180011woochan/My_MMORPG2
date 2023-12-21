@@ -1,6 +1,5 @@
 #pragma once
 #include "Session.h"
-//class Session;
 
 class SessionManager
 {
@@ -18,7 +17,7 @@ public:
 		return s;
 	}
 
-private:
+public:
 	array<Session, MAX_USER> clients;
 };
 
