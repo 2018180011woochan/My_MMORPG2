@@ -55,6 +55,9 @@ void Dispatch()
 			exOver->wsaBuf.buf = reinterpret_cast<char*>(clientSocket);
 			int addrSize = sizeof(SOCKADDR_IN);
 			AcceptEx(GSocket, clientSocket, exOver->sendBuf, 0, addrSize + 16, addrSize + 16, 0, &exOver->over);
+			
+			cout << clientID << "CONNECTED!" << endl;
+
 			break;
 		}
 	}
