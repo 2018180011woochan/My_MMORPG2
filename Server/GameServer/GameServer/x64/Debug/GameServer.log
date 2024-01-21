@@ -1,2 +1,8 @@
-﻿  main.cpp
+﻿  pch.cpp
+  main.cpp
+  OverlappedEXP.cpp
+  Session.cpp
+  SessionManager.cpp
+  코드를 생성하고 있습니다...
+  Protocol.pb.cc
   GameServer.vcxproj -> C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\x64\Debug\GameServer.exe
