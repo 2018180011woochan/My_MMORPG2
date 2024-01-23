@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "SessionManager.h"
+#include "Protocol.pb.h"
 constexpr int ThreadSize = 6;
 
 // юс╫ц
@@ -57,6 +58,14 @@ void Dispatch()
 			AcceptEx(GSocket, clientSocket, exOver->sendBuf, 0, addrSize + 16, addrSize + 16, 0, &exOver->over);
 			
 			cout << clientID << "CONNECTED!" << endl;
+
+			//// test
+			//char buffer[1024];
+			//Protocol::S_TEST pkt;
+			//pkt.set_attack(77);
+			//pkt.set_hp(99);
+			//pkt.set_id(5);
+			//pkt.ParseFromArray(buffer, strlen(buffer));
 
 			break;
 		}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Protocol;
+
+//uint32 SC_TEST = 0;
+//uint32 CS_TEST = 1;
+
+message BuffData
+{
+	uint64 buffId = 1;
+	float remainTime = 2;
+	repeated uint64 victims = 3;
+}
+
+message S_TEST
+{
+	uint64 id = 1;
+	uint32 hp = 2;
+	uint32 attack = 3;
+}

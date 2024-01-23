@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using System.Net.Sockets;
 using System.Text;
+using Google.Protobuf;
 
 public class NetworkManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class NetworkManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("hey!");
         ConnectToServer("127.0.0.1", 7777);
     }
 

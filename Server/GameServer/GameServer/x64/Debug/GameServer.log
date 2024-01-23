@@ -1,8 +1,3 @@
-﻿  pch.cpp
-  main.cpp
-  OverlappedEXP.cpp
-  Session.cpp
-  SessionManager.cpp
-  코드를 생성하고 있습니다...
-  Protocol.pb.cc
+﻿  main.cpp
+C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\GameServer\main.cpp(92,6): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
   GameServer.vcxproj -> C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\x64\Debug\GameServer.exe

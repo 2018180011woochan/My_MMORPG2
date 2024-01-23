@@ -70,6 +70,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Libs\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Libs\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Libs\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\KWC\Desktop\myGameServer2\Server\GameServer\Libraries\Libs\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -147,6 +163,12 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="Protocol.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="SessionManager.cpp" />
   </ItemGroup>
@@ -156,8 +178,12 @@
     <ClInclude Include="OverlappedEXP.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="protocol.h" />
+    <ClInclude Include="Protocol.pb.h" />
     <ClInclude Include="Session.h" />
     <ClInclude Include="SessionManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Protobuf\bin\Protocol.proto" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
